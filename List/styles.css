@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use Flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+}
+
+.container {
+    width: 100%;
+    max-width: 600px; /* Set a max width for larger screens */
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+.task-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%; /* Make inputs full width */
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+button {
+    cursor: pointer;
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    padding: 8px; /* Decrease button size */
+    border-radius: 4px;
+    width: 100%; /* Make buttons full width */
+    font-size: 14px; /* Adjust font size */
+}
+
+button:hover {
+    background-color: #1abc9c;
+}
+
+#taskList {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    width: 100%; /* Make task items full width */
+    max-width: 380px; /* Set a max width for task items */
+}
+
+.task-item > span {
+    flex: 1; /* Allow the task name to take available space */
+    text-align: left; /* Align text to the left */
+}
+
+.task-item > div {
+    display: flex;
+    gap: 5px; /* Space between buttons */
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.high-priority {
+    color: rgb(27, 118, 118);
+}
+
+.medium-priority {
+    color: rgb(27, 118, 118);
+}
+
+.low-priority {
+    color: rgb(27, 118, 118);
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: space-between; /* Space buttons evenly */
+    margin-top: 10px;
+}
+
+.filter-buttons button {
+    flex: 1; /* Make buttons the same size */
+    margin: 0 5px; /* Add space between buttons */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+
+    .task-form {
+        flex-direction: column; /* Stack inputs vertically */
+    }
+
+    button {
+        width: 100%; /* Make buttons full width */
+    }
+
+    .filter-buttons {
+        flex-direction: column; /* Stack filter buttons vertically */
+        align-items: stretch; /* Stretch buttons to full width */
+    }
+
+    .filter-buttons button {
+        margin-bottom: 5px; /* Add space between buttons */
+    }
+}
